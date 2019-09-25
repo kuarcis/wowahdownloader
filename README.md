@@ -13,7 +13,7 @@ The idea of this project is to
 4.uplaod price data to an influx db.
 
 If you are using a free google script acount like i did, you'll face the 6 min daily limit of computing time.
-For all the data process tasks 1~4 , free google script service will take about 10~20 seconds to complete.(12~15 seconds to be precise)
+For all the data process tasks 1 to 4 , free google script service will take about 10~20 seconds to complete.(12 to 15 seconds to be precise)
 In real life case, i put a 30 min schedule for the whole project.
 
 In the forseeable future, this porject will not be updated for the current blizzard token system, or to other platform.

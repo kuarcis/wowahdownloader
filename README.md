@@ -1,20 +1,18 @@
-# wowahdownloader
-A wow auction house json downloader and data processor
+# WoW AH Downloader
+# Overview
+wowahdownloader is a specialized tool for downloading and processing JSON data from the World of Warcraft (WoW) Auction House (AH). It is crafted in Google App Script, closely resembling JavaScript in syntax.
 
-This is originally a google app script project, and all is written in google script, which is 99% like javascript.
+# Features
+Data Downloading: Leverages ahdump.js to check for and store new AH price JSON data.
+Data Processing: Computes the weighted average price of the top five orders for each item and records the results in a dbtmp sheet.
+Database Updates: New item details are uploaded to MongoDB, and price data is sent to InfluxDB.
+# Performance
+The script is fine-tuned for quick execution, completing data processing tasks within 10-20 seconds under the free Google Script account's 6-minute daily computation limit. For routine operations, a 30-minute interval is scheduled.
 
-All the code is done in the envrioment when blizzard still using single token mechanism to check json request (around 2016 I think), so there may need some adjsutment for current json api requirement
+# Project Status
+This project, last updated in September 2019, is not slated for future updates to align with Blizzard's current token system or for migration to other platforms. Nonetheless, questions and discussions on data processing or any other related topics are encouraged.
 
-The idea of this project is to
-1.check if there's newer auction house price json , and keep ah json file by using ahdump.js
-2.calculate weight-average top five order price for all items, and keep the result in dbtmp sheet
-3.upload new item info to a mango db.
-4.uplaod price data to an influx db.
+# Contact
+Should you have any inquiries or require assistance, please feel free to make contact.
 
-If you are using a free google script acount like i did, you'll face the 6 min daily limit of computing time.For all the data process tasks 1 to 4 , free google script service will take about 10~20 seconds to complete.(12 to 15 seconds to be precise). In real life case, I put a 30 min schedule for the whole project.
-
-In the forseeable future, this porject will not be updated for the current blizzard token system, or to other platform.
-
-Still welcome for any question about data process or any other aspects.
-
-Joseph, 2019/9
+Joseph, September 2019
